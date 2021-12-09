@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     uint windowed_previous_value = -1;
     /* PART 2 */
 
-    while (fread(buffer + buffer_pos, 1, 1, data))
+    while (fread(buffer + buffer_pos, sizeof(*buffer), 1, data))
     {
         if (buffer[buffer_pos] == '\n')
         {

@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 
     uint horizontal_position, depth, aim = 0;
 
-    while (fread(buffer + buffer_pos, 1, 1, data))
+    while (fread(buffer + buffer_pos, sizeof(*buffer), 1, data))
     {
         if (buffer[buffer_pos] == '\n')
         {
